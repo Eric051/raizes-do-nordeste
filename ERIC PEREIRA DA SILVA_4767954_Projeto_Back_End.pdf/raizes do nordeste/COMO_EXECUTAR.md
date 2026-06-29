@@ -19,7 +19,7 @@ Tem dois jeitos.
 **Jeito 1, clonar pelo Git** (recomendado se for mexer no código):
 
 ```bash
-git clone https://github.com/lucas-quintanilha/raizes_do_nordeste_api.git
+git 
 cd raizes_do_nordeste_api
 ```
 
