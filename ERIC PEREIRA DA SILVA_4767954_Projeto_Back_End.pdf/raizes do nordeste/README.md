@@ -1,179 +1,68 @@
-Raízes do Nordeste API
+## Como Executar
 
-API REST desenvolvida para o projeto Rede Raízes do Nordeste, atividade prática da disciplina Projeto Multidisciplinar – Trilha Back-End do curso de Análise e Desenvolvimento de Sistemas.
+### 1. Clone o repositório
 
-O sistema simula o gerenciamento de uma rede de lanchonetes especializadas em culinária nordestina, oferecendo recursos para administração de usuários, unidades, produtos, cardápios, estoque, pedidos, pagamentos e programa de fidelidade.
+```bash
+git clone https://github.com/Eric051/raizes-do-nordeste.git
+cd raizes-do-nordeste
+```
 
-Objetivo
+### 2. Crie um ambiente virtual
 
-O objetivo deste projeto é desenvolver uma API Back-End utilizando boas práticas de arquitetura de software, permitindo o gerenciamento completo das operações da rede Raízes do Nordeste.
-
-A aplicação foi construída utilizando FastAPI e SQLAlchemy, seguindo uma arquitetura organizada por camadas para facilitar manutenção, escalabilidade e reutilização do código.
-
-Tecnologias Utilizadas
-Python 3.11+
-FastAPI
-SQLAlchemy ORM
-SQLite
-JWT (Autenticação)
-bcrypt
-Pydantic
-Uvicorn
-Swagger UI
-ReDoc
-Estrutura do Projeto
-raizes_do_nordeste/
-
-│
-├── app/
-│   ├── api/
-│   ├── core/
-│   ├── database/
-│   ├── models/
-│   ├── repositories/
-│   ├── schemas/
-│   ├── services/
-│   ├── security/
-│   └── utils/
-│
-├── docs/
-│
-├── tests/
-│
-├── main.py
-├── seed.py
-├── requirements.txt
-├── README.md
-└── .env.example
-Funcionalidades
-
-O sistema contempla os seguintes módulos:
-
-Cadastro de usuários
-Autenticação por JWT
-Controle de perfis de acesso
-Cadastro de unidades
-Cadastro de categorias
-Cadastro de produtos
-Gerenciamento de cardápio
-Controle de estoque
-Registro de clientes
-Cadastro de pedidos
-Atualização do status dos pedidos
-Simulação de pagamento
-Programa de fidelidade
-Histórico de operações
-Documentação automática da API
-Organização do Código
-
-A aplicação está dividida em camadas:
-
-API
-
-Responsável pelas rotas REST, validação dos dados e comunicação com o cliente.
-
-Services
-
-Implementa todas as regras de negócio do sistema.
-
-Models
-
-Define as entidades do banco de dados utilizando SQLAlchemy ORM.
-
-Schemas
-
-Modelos Pydantic utilizados para validação das requisições e respostas.
-
-Database
-
-Responsável pela configuração da conexão com o banco.
-
-Security
-
-Implementa autenticação JWT, criptografia de senhas e autorização.
-
-Recursos Implementados
-
-✔ CRUD de Usuários
-
-✔ CRUD de Clientes
-
-✔ CRUD de Produtos
-
-✔ CRUD de Categorias
-
-✔ CRUD de Unidades
-
-✔ Controle de Estoque
-
-✔ Controle de Cardápio
-
-✔ Registro de Pedidos
-
-✔ Atualização de Status
-
-✔ Programa de Fidelidade
-
-✔ Login com JWT
-
-✔ Documentação Swagger
-
-Como Executar
-
-Clone o projeto:
-
-git clone <repositorio>
-
-Crie o ambiente virtual:
-
+```bash
 python -m venv venv
+```
 
-Ative o ambiente:
+### 3. Ative o ambiente virtual
 
-Windows
+**Windows**
 
+```bash
 venv\Scripts\activate
+```
 
-Linux/Mac
+**Linux/macOS**
 
+```bash
 source venv/bin/activate
+```
 
-Instale as dependências:
+### 4. Instale as dependências
 
+```bash
 pip install -r requirements.txt
+```
 
-Execute a aplicação:
+### 5. Execute o seed (caso exista)
 
+```bash
+python seed.py
+```
+
+### 6. Inicie a API
+
+```bash
 uvicorn main:app --reload
-Documentação
+```
 
-Após iniciar o servidor, a documentação poderá ser acessada em:
+A API ficará disponível em:
 
-Swagger
+```
+http://127.0.0.1:8000
+```
 
-http://localhost:8000/docs
+## Documentação
 
-ReDoc
+Após iniciar o servidor, acesse:
 
-http://localhost:8000/redoc
-Objetivos Atendidos
-Modelagem do banco de dados
-API REST
-Persistência de dados
-Autenticação e autorização
-Controle de estoque
-Gestão de pedidos
-Programa de fidelidade
-Integração simulada de pagamentos
-Documentação automática
-Desenvolvedor
+### Swagger UI
 
-Nome: Eric Pereira da Silva
+```
+http://127.0.0.1:8000/docs
+```
 
-Curso: Análise e Desenvolvimento de Sistemas
+### ReDoc
 
-Instituição: UNINTER
-
-Disciplina: Projeto Multidisciplinar – Trilha Back-End
-
-Ano: 2026
+```
+http://127.0.0.1:8000/redoc
+```
